@@ -1,0 +1,94 @@
+.mint { --flavor: mintcream }
+.moan { --flavor: blanchedalmond }
+.whip { --flavor: papayawhip }
+.tang { --flavor: orange }
+.lemon { --flavor: lemonchiffon }
+.plum { --flavor: plum }
+.lava { --flavor: lavender }
+
+:root { 
+  background-color: peachpuff;
+  background-image: conic-gradient(violet, orange, peachpuff, blanchedalmond, lime, limegreen, chocolate, darkorange, papayawhip, plum, violet);
+  color: #202;
+}
+
+::selection { 
+  background: #202;
+  color: chocolate;
+}
+
+:any-link {
+  color: inherit;
+  cursor: grabbing;
+}
+
+:focus {
+  outline: thick outset;
+  text-decoration-style: dotted;
+  background-color: #202;
+  color: chocolate;
+}
+
+:hover {
+  text-decoration-style: double;
+}
+
+html {
+  font: max(3ch, 3vmax + 5vmin) sans-serif;
+  line-height: 1.618;
+}
+
+body {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+article {
+  align-items: center;
+  contain: content;
+  display: flex;
+  flex-flow: column;
+  margin: auto;
+}
+
+nav {
+  align-items: center;
+  contain: content;
+  display: flex;
+  flex-flow: column;
+  margin: auto;
+}
+
+p {
+  max-width: 10em;
+}
+
+a {
+  border-radius: 1ch;
+  display: inline-flex;
+}
+
+nav a {
+  border: thick outset;
+  margin: 1em;
+}
+
+nav ~ p {
+  margin-bottom: 1em;
+}
+
+@media (orientation: portrait) {
+  nav ~ p,
+  nav a {
+    writing-mode: sideways-rl;
+  }
+}
+
+* { box-sizing: border-box }
+[data-pudding] { --pudding: 3rem }
+[data-pudding~=top] { padding-top: var(--pudding) }
+[data-pudding~=right] { padding-right: var(--pudding) }
+[data-pudding~=bottom] { padding-bottom: var(--pudding) }
+[data-pudding~=left] { padding-left: var(--pudding) }
+[data-pudding~=inline] { padding-inline: var(--pudding) }
+[data-pudding~=block] { padding-block: var(--pudding) }
