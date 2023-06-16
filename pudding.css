@@ -80,7 +80,7 @@ nav ~ p {
 @media (orientation: portrait) {
   nav ~ p,
   nav a {
-    writing-mode: sideways-rl;
+    writing-mode: vertical-rl;
   }
 }
 
